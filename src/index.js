@@ -1,14 +1,21 @@
-function promesa() {
-    return new Promise((resolve) => {
+function contraseña() {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
-            resolve("💎 Promesa ejecutada con éxito después de 8 segundos")
-        }, 8000);
-    })
+            const contraseña = "1234567891000"
+            if(contraseña.length >= 8) {
+              resolve(`La contraseña cumple con el estándar de seguridad`)
+            }else{
+                reject(`La contraseña no cumple con el estándar de longitud`)
+            }
+        }, 3000)
+    }) 
 }
 
-promesa() 
+contraseña() 
   .then(console.log) 
   .catch(console.error)
+
+
 
 
 
