@@ -6,7 +6,9 @@ function promesa() {
     })
 }
 
-
+promesa() 
+  .then(console.log) 
+  .catch(console.error)
 
 
 
